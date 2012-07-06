@@ -1,0 +1,496 @@
+<html>
+<head>
+<title>OpenGL Insights</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>    
+
+<body>
+
+<a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+<table summary="" border="0" width="630">
+<tr align="center" class="sitemap">
+  <td><a href="cover.html">Cover</a></td>
+  <td><a href="toc.html">Table of Contents</a></td>
+  <td><a href="pipeline.html">Pipeline Map</a></td>
+  <td><a href="tips.html">OpenGL Tips</a></td>
+  <td><a href="contributors.html">Contributors</a></td>
+  <td><a href="reviews.html">Reviews</a></td>
+  <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+ -->  
+  <td><a href="bibtex.html">BibTeX</a></td>
+  <td><a href="errata.html">Errata</a></td>
+  <td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1>Table of Contents</h1>
+
+<table summary="" border="0" width="639">
+
+<tr class="spaceUnder">
+<td colspan="2">
+To the right of each chapter, a combination of <span class="tipsAPI">OpenGL</span>, <span class="tipsAPI">WebGL</span>, <span class="tipsAPI">OpenGL ES</span>, and <span class="tipsAPI">OpenGL SC</span> tags identify what APIs the chapter is most relevant to.
+</td>
+</tr>
+
+<tr class="spaceUnder">
+<td colspan="2" class="sectionName">
+I Discovering
+</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  1. <em>Teaching Computer Graphics Starting with Shader-Based OpenGL</em>
+  <br />
+  Edward Angel
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  2. <em>Transitioning Students to Post-Deprecation OpenGL</em>
+  <br />
+  Mike Bailey
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  3. <em>WebGL for OpenGL Developers</em>
+  <br />
+  Patrick Cozzi and Scott Hunter
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  4. <em>Porting Mobile Apps to WebGL</em>
+  <br />
+  Ashraf Samy Hegab
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL<br />OpenGL ES</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  5. <em>The GLSL Shader Interfaces</em>
+  <br />
+  Christophe Riccio
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  6. <em>An Introduction to Tessellation Shaders</em>
+  <br />
+  Philip Rideout and Dirk Van Gelder
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  7. <em>Procedural Textures in GLSL</em>
+  <br />
+  Stefan Gustavson
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  8. <em>OpenGL SC Emulation Based on OpenGL and OpenGL ES</em>
+  <br />
+  Hwanyong Lee and Nakhoon Baek
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />OpenGL ES<br />OpenGL SC</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  9. <em>Mixing Graphics and Compute with Multiple GPUs</em>
+  <br />
+  Alina Alt
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+<td colspan="2" class="sectionName">
+II Rendering Techniques
+</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  10. <em>GPU Tessellation: We Still Have a LOD of Terrain to Cover</em>
+  <br />
+  António Ramires Fernandes and Bruno Oliveira
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  11. <em>Antialiased Volumetric Lines Using Shader-Based Extrusion</em>
+  <br />
+  S&#233;bastien Hillaire
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  12. <em>2D Shape Rendering by Distance Fields</em>
+  <br />
+  Stefan Gustavson
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  13. <em>Efficient Text Rendering in WebGL</em>
+  <br />
+  Benjamin Encz
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  14. <em>Layered Textures Rendering Pipeline</em>
+  <br />
+  Dzmitry Malyshau
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  15. <em>Depth of Field with Bokeh Rendering</em>
+  <br />
+  Charles de Rousiers and Matt Pettineo
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  16. <em>Shadow Proxies</em>
+  <br />
+  Jochem van der Spek
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+<td colspan="2" class="sectionName">
+III Bending the Pipeline
+</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  17. <em>Real-Time Physically Based Deformation Using Transform Feedback</em>
+  <br />
+  Muhammad Mobeen Movania and Lin Feng
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  18. <em>Hierarchical Depth Culling and Bounding-Box Management on the GPU</em>
+  <br />
+  Dzmitry Malyshau
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  19. <em>Massive Number of Shadow-Casting Lights with Layered Rendering</em>
+  <br />
+  Daniel R&aacute;kos
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  20. <em>Efficient Layered Fragment Buffer Techniques</em>
+  <br />
+  Pyarelal Knowles, Geoff Leach, and Fabio Zambetta
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  21. <em>Programmable Vertex Pulling</em>
+  <br />
+  Daniel R&aacute;kos
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  22. <em>Octree-Based Sparse Voxelization Using the GPU Hardware Rasterizer</em>
+  <br />
+  Cyril Crassin and Simon Green
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+<td colspan="2" class="sectionName">
+IV Performance
+</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  23. <em>Performance Tuning for Tile-Based Architectures</em>
+  <br />
+  Bruce Merry
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL<br />OpenGL ES</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  24. <em>Exploring Mobile vs. Desktop OpenGL Performance</em>
+  <br />
+  Jon McCaffrey
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  25. <em>Improving Performance by Reducing Calls to the Driver</em>
+  <br />
+  S&#233;bastien Hillaire
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  26. <em>Indexing Multiple Vertex Arrays</em>
+  <br />
+  Arnaud Masserann
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  27. <em>Multi-GPU Rendering on NVIDIA Quadro</em>
+  <br />
+  Shalini Venkataraman
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr>
+
+<tr class="spaceUnder">
+<td colspan="2" class="sectionName">
+V Transfers
+</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  28. <em>Asynchronous Buffer Transfers</em>
+  <br />
+  Ladislav Hrabcak and Arnaud Masserann
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  29. <em>Fermi Asynchronous Texture Transfers</em>
+  <br />
+  Shalini Venkataraman
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  30. <em>WebGL Models: End-to-End</em>
+  <br />
+  Won Chun
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  31. <em>In-Game Video Capture with Real-Time Texture Compression</em>
+  <br />
+  Brano Kemen
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  32. <em>An OpenGL-Friendly Geometry File Format and Its Maya Exporter</em>
+  <br />
+  Adrien Herubel and Venceslas Biri
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />OpenGL ES</td>
+</tr>
+
+<tr class="spaceUnder">
+<td colspan="2" class="sectionName">
+VI Debugging and Profiling
+</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  33. <em>ARB_debug_output: A Helping Hand for Desperate Developers</em>
+  <br />
+  António Ramires Fernandes and Bruno Oliveira
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  34. <em>The OpenGL Timer Query</em>
+  <br />
+  Christopher Lux
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  35. <em>A Real-Time Profiling Tool</em>
+  <br />
+  Lionel Fuentes
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  36. <em>Browser Graphics Analysis and Optimizations</em>
+  <br />
+  Chris Dirks and Omar A. Rodriguez
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  37. <em>Performance State Tracking</em>
+  <br />
+  Aleksandar Dimitrijević
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  38. <em>Monitoring Graphics Memory Usage</em>
+  <br />
+  Aleksandar Dimitrijević
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+<td colspan="2" class="sectionName">
+VII Software Design
+</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  39. <em>The ANGLE Project: Implementing OpenGL ES 2.0 on Direct3D</em>
+  <br />
+  Daniel Koch and Nicolas Capens
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL<br />OpenGL ES</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td>
+  40. <em>SceneJS: A WebGL-Based Scene Graph Engine</em>
+  <br />
+  Lindsay Kay
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  41. <em>Features WebGL and Design Choices in SpiderGL</em>
+  <br />
+  Marco Di Benedetto, Fabio Ganovelli, and Francesco Banterle
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  42. <em>Multimodal Interactive Simulations on the Web</em>
+  <br />
+  Tansel Halic, Woojin Ahn, and Suvranu De
+  </td>
+  <td width="15%" align="right" class="tipsAPI">WebGL</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  43. <em>A Subset Approach to Using OpenGL and OpenGL ES</em>
+  <br />
+  Jesse Barker and Alexandros Frantzis
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />OpenGL ES</td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td>
+  44. <em>The Build Syndrome</em>
+  <br />
+  Jochem van der Spek and Daniel Dekkers
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />OpenGL ES</td>
+</tr>
+
+<!--
+
+<tr class="spaceUnder">
+  <td>
+  x. <em>xxx</em>
+  <br />
+  xxx
+  </td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td width="15%" align="right" class="tipsAPI">OpenGL<br />OpenGL ES</td>
+</tr> 
+
+-->
+
+</table>
+
+</body>    
+</html>

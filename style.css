@@ -1,0 +1,48 @@
+body { 
+    font-family: "Helvetica";
+}
+
+h1{ 
+    font-family: "Helvetica";
+	color: #5482AB;
+}
+
+h2{ 
+    font-family: "Helvetica";
+	color: #5482AB;
+}
+
+.sitemap {
+    font-family: "Helvetica";
+    font-size: 75%;
+}
+
+.code {
+	font-family: "Courier New";
+}
+
+.replaceableCode {
+	font-family: "Courier New";
+    color: red;
+}
+
+tr.spaceUnder > td {
+    padding-bottom: 1em;
+}
+
+.bookTitle{ 
+    font-family: "Helvetica";
+	color: #5482AB;
+}
+
+.tipsAPI {
+    font-family: "Helvetica";
+    font-size: 75%;
+	color: #5482AB;
+}
+
+.sectionName {
+    font-family: "Helvetica";
+	font-weight:bold;
+	color: #5482AB;
+}

@@ -1,0 +1,305 @@
+<html>
+<head>
+<title>OpenGL Insights</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>    
+
+<body>
+
+<a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+<table summary="" border="0" width="630">
+<tr align="center" class="sitemap">
+  <td><a href="cover.html">Cover</a></td>
+  <td><a href="toc.html">Table of Contents</a></td>
+  <td><a href="pipeline.html">Pipeline Map</a></td>
+  <td><a href="tips.html">OpenGL Tips</a></td>
+  <td><a href="contributors.html">Contributors</a></td>
+  <td><a href="reviews.html">Reviews</a></td>
+  <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+ -->  
+  <td><a href="bibtex.html">BibTeX</a></td>
+  <td><a href="errata.html">Errata</a></td>
+  <td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1>Tips</h1>
+
+<table summary="" border="0" width="639">
+<tr class="spaceUnder">
+<td colspan="2">
+<p>
+<span class="bookTitle">OpenGL Insights</span> includes short tips for OpenGL, OpenGL ES, and WebGL that were assembled by the contributors.  We feel it adds unique value that supplements the chapters.
+</p>
+<p>
+To the left of each tip, a combination of <span class="tipsAPI">OpenGL</span>, <span class="tipsAPI">WebGL</span>, and <span class="tipsAPI">OpenGL ES</span> tags identify what APIs the tip is relevant to.
+</p>
+</td>
+</tr>
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  <span class="code">glCreateShaderProgram</span> may provide faster build performance than a sequence of <span class="code">glCompilerShader</span> and <span class="code">glLinkProgram</span>. However, it only creates a single shader stage program.  
+  </td>
+</tr>  
+  
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  Not all shader objects need a <span class="code">main()</span> function. Multiple shader objects can be linked together in the same program to allow sharing the same code between different programs.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  Build all GLSL shaders and programs first, and then query the results to hide build and query latency.
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  Call <span class="code">glDeleteShader</span> after attaching a shader to a program to simplify cleanup later.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  Five OpenGL 4.2 functions generate info logs:
+  <ul>
+    <li><span class="code">glCompileShader</span></li>
+    <li><span class="code">glCreateShaderProgram</span></li>
+    <li><span class="code">glLinkProgram</span></li>
+    <li><span class="code">glValidateProgram</span></li>
+    <li><span class="code">glValidateProgramPipeline</span></li>
+  </ul>
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />OpenGL ES</td>
+  <td>
+  Functions like <span class="code">glGenTextures</span> do not create an object, they return a name for use with a new object. Objects are typically created with <span class="code">glBind*</span> unless they are based on direct state access, in which case any other function may actually create the object.
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  <span class="code">glGenerateMipmap</span> may execute on the CPU, and therefore may be especially slow. Generate mipmaps offline or profile this function.
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  When using the default texture scanline alignment, <span class="code">GL_PACK_ALIGNMENT</span>, of four bytes, with <span class="code">glTexImage2D</span> or <span class="code">glTexSubImage2D</span>, the end of each row of pixel data may need to be padded to the next multiple of the alignment.
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  Integer textures, <span class="code">GL_EXT_texture_integer</span>, do not support filtering.
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  A buffer texture is a 1D texture with a buffer object as storage which can only be fetched, not sampled.
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  Unmap buffers as soon as possible to allow the driver to start the transfer or to schedule the transfer.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+Use buffer usage flags appropriately: <span class="code">COPY</span>, GL to GL; <span class="code">DRAW</span>, APP to GL; <span class="code">READ</span>, GL to APP; <span class="code">STREAM</span>, update always, <span class="code">DYNAMIC</span>, update often, <span class="code">STATIC</span>, update rarely.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  Set a GLSL sampler uniform to the texture unit number, not the OpenGL texture ID.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  <span class="code">glGetUniformLocation</span> returns −1 but doesn’t generate an error if the uniform name does not correspond to an active uniform. All declared uniforms are not active; uniforms that do not contribute to the shader's output can be optimized out by the compiler.
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  An OpenGL context must always be current for the duration of OpenGL/compute interoperability.  
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  An OpenGL object should not be accessed by OpenGL while it is mapped for usage within the compute portion.  
+  </td>
+</tr>
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  Avoid extraneous <span class="code">glBindFramebuffer</span> calls. Use multiple attachments to a FBO rather than managing multiple FBOs.  
+  </td>
+</tr>
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  FBOs must always be validated before use to ensure that the selected format is renderable.
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  Only one OpenGL query per query type, e.g., timer or occlusion, can be active at a time.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  For occlusion queries, using <span class="code">GL_ANY_SAMPLES_PASSED</span> may be more effective than <span class="code">GL_SAMPLES_PASSED</span>, as a rendering doesn't have to continue as soon as one fragment passed.
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  For image-space rendering on GPUs with a large clipping guard band clipping, e.g., GeForce, Radeon, and PowerVR series 6 use a large clipped triangle instead of a quad. Measure both if in doubt.
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  To test vertex throughput, do not render to a 1×1 viewport because parallelism is lost; instead, render outside of the view frustum.
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  <span class="code">glGetError</span> is particularly slow, especially in multi-process WebGL architectures. Only use it in debug builds or instead use GL_ARB_debug output when available.
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  Geometry shaders are usually output bound so spending ALU time to reduce the amount of data output is a performance win.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">WebGL</td>
+  <td>
+  In addition to #defining <span class="code">GL_OES_standard_derivatives</span> before using <span class="code">dFdx</span>, <span class="code">dFdy</span>, and <span class="code">fwidth</span>, also remember to call <span class="code">context.getExtension("OES standard derivatives")</span> in JavaScript.
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  To accurately compute the length of a gradient, avoid <span class="code">fwidth(v)</span>; instead use <span class="code">sqrt(dFdx(v) * dFdx(v) + dFdy(v) * dFdy(v))</span>.  
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">WebGL<br />OpenGL ES</td>
+  <td>
+  <span class="code">highp</span> is only available in fragment shaders if <span class="code">GL_FRAGMENT_PRECISION_HIGH</span> is #defined. Beware of the performance implications of using <span class="code">highp</span> in vertex or fragment shaders.  
+  </td>
+</tr>
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  In OpenGL, precision qualifiers were reserved in GLSL 1.20 and OpenGL 2.1 but actually introduced with GLSL 1.30 and OpenGL 3.0. From GLSL 1.40 and OpenGL 3.1, and for the purpose of convergence with OpenGL ES 2.0, <span class="code">GL_FRAGMENT_PRECISION_HIGH</span> is defined as <span class="code">1</span> in a fragment shader.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  By default, precision for vertex, tessellation, and geometry shader stages is <span class="code">highp</span> for <span class="code">int</span> types, and <span class="code">mediump</span> for the fragment shader stage <span class="code">int</span> types. This may lead to warnings on some implementations. <span class="code">float</span> is always <span class="code">highp</span> by default.  
+  </td>
+</tr>
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">WebGL</td>
+  <td>
+  Given a WebGL context <span class="code">gl</span>, <span class="code">gl.TRUE</span> is undefined. When porting OpenGL or OpenGL ES code, do not change <span class="code">GL_TRUE</span> to <span class="code">gl.TRUE</span> because it will silently evaluate to <span class="code">false</span>.  
+  </td>
+</tr>
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  Depth writes only occur if <span class="code">GL_DEPTH_TEST</span> is enabled.
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td>
+  The noise functions are still unimplemented in GLSL. Chapter 7 fixes this.
+  </td>
+</tr> 
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  <span class="code">gl_VertexID</span> gets values in <span class="code">[first, first+count-1]</span> when generated from a <span class="code">DrawArray*</span> command, and not in <span class="code">[0, count-1]</span>. Especially useful when using a zero input attributes vertex shader.  
+  </td>
+</tr>  
+
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td>
+  There are two ways to work with point size: <span class="code">glPointSize</span> in the client-side code or <span class="code">gl_PointSize</span> in the GLSL code if <span class="code">PROGRAM_POINT_SIZE</span> is enabled.  
+  </td>
+</tr>  
+
+<!--  
+<tr class="spaceUnder">
+  <td width="15%" class="tipsAPI">OpenGL</td>
+  <td width="15%" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  <td width="15%" class="tipsAPI">OpenGL<br />OpenGL ES</td>
+  <td>
+  </td>
+</tr>  
+
+<span class="code">
+</span>
+-->
+
+</table>
+
+</body>    
+</html>
