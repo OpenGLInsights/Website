@@ -51,3 +51,16 @@ tr.spaceUnder > td {
         font-size: 0.9em;
         margin-top: 0;
     }
+
+table#contributors {
+  border-collapse: collapse;
+}
+
+    /* zebra striping */
+    table#contributors tr:nth-child(odd) {
+      background-color: #eee;
+    }
+
+    table#contributors tr td {
+      padding: 0.7em;
+    }
