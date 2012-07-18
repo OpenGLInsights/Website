@@ -1,0 +1,311 @@
+<html>
+<head>
+  <title>OpenGL Insights</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <style type="text/css">
+  hr {
+    width: 630px;
+    margin-left: 0;
+  }
+
+  td.sectionName a,
+  td.sectionName a:active,
+  td.sectionName a:visited {
+    text-decoration: none;
+    color: #5482AB;
+  }
+  td.sectionName a:hover {
+    text-decoration: underline;
+  }
+
+  td.sectionName span {
+    font-family: serif;
+  }
+  </style>
+</head>    
+
+<body>
+
+  <a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+  <table summary="" border="0" width="630">
+    <tr align="center" class="sitemap">
+      <td><a href="cover.html">Cover</a></td>
+      <td><a href="toc.html">Table of Contents</a></td>
+      <td><a href="pipeline.html">Pipeline Map</a></td>
+      <td><a href="tips.html">OpenGL Tips</a></td>
+      <td><a href="contributors.html">Contributors</a></td>
+      <td><a href="reviews.html">Reviews</a></td>
+      <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+-->  
+<td><a href="bibtex.html">BibTeX</a></td>
+<td><a href="errata.html">Errata</a></td>
+<td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1> I Discovering</h1>
+
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td colspan="2">
+    <p>
+      In this section, we discover many facets of OpenGL: teaching modern OpenGL in academia; using OpenGL on the web with WebGL; tessellation shaders in OpenGL 4.0; procedural textures; the safety critical variant, OpenGL SC; and multi-GPU OpenGL and CUDA interop.
+    </p>
+    <p>
+      OpenGL enjoys widespread use in computer graphics courses around the world. Now-depreciated OpenGL features such as fixed-function lighting, immediate mode, and built-in transforms made the barrier to entry low. However, modern OpenGL has removed many of these features, resulting in a lean API that exposes the functionality of the underlying hardware. Academia has taken these changes in stride, updating their graphics courses to modern OpenGL. In Chapter 1, &quot;Teaching Computer Graphics Starting With Shader-Based OpenGL,&quot; Edward Angel discusses how an introductory computer graphics course can be taught using modern OpenGL. In Chapter 2, &quot;Transitioning Students to Post-Deprecation OpenGL,&quot; Mike Bailey presents C++ abstractions and GLSL naming conventions to bridge the gap between depreciated and modern OpenGL for use in course assignments.
+    </p>
+    <p>
+      When we announced our call for authors for OpenGL Insights in May 2011, we included WebGL as a desired topic. Since then, WebGL has gained such traction that an entire book could easily be justified. In Chapter 3, &quot;WebGL for OpenGL Developers,&quot; Patrick Cozzi and Scott Hunter present WebGL for those who already know OpenGL. In the following chapter, &quot;Porting Mobile Apps to WebGL,&quot; Ashraf Samy Hegab shows the benefits, differences, and trade-offs of using WebGL for mobile applications. Several chapters in later sections continue our WebGL exploration.
+    </p>
+    <p>
+      Christophe Riccio takes a rigorous look at communication between the OpenGL API and GLSL and different shader stages in Chapter 5, &quot;The GLSL Shader Interfaces.&quot; He carefully examines using varying blocks; attribute, varying, and fragment output variable locations; linked and separated programs; using semantics in our designs; and more.
+    </p>
+    <p>
+      Today, one of the differences between movie-quality rendering and real-time rendering is geometric complexity; movies generally have much higher geometric detail. To improve geometric detail in real-time rendering, tessellation can be done in hardware. Although this has been available on ATI cards since the ATI Radeon 8500 in 2001, tessellation shaders were recently standardized and made part of OpenGL 4.0. In Chapter 6, &quot;An Introduction to Tessellation Shaders,&quot; Philip Rideout and Dirk Van Gelder introduce the new fixed and programmable tessellation stages.
+    </p>
+    <p>
+      As the gap between compute power and memory bandwidth continues to widen, procedural techniques become increasingly important. Small size is speed. Procedural textures not only have trivial memory requirements, but can also have excellent visual quality, allowing for analytic derivatives and anisotropic antialiasing. Stefan Gustavson introduces procedural textures, including antialiasing and using Perlin and Worley noise in Chapter 7, &quot;Procedural Textures in GLSL.&quot; Best of all, he provides GLSL noise functions for OpenGL, OpenGL ES, and WebGL.
+    </p>
+    <p>
+      OpenGL SC, for safety critical, may be one of the lesser-known OpenGL variants. In Chapter 8, &quot;OpenGL SC Emulation Based on OpenGL and OpenGL ES,&quot; Hwanyong Lee and Nakhoon Baek explain the motivation for OpenGL SC and describe the benefits of implementing it based on other OpenGL variants, instead of creating custom drivers or a software implementation.
+    </p>
+    <p>
+      In the past 15 years, consumer GPUs have transformed from dedicated fixed-function graphics processors to general-purpose massively-parallel processors. Technologies like CUDA and OpenCL have emerged for developing general data-parallel algorithms on the GPU. There is, of course, a need for these general algorithms, like particle systems and physical simulation, to interop efficiently with OpenGL for rendering. In the final chapter of this section, &quot;Mixing Graphics and Compute with Multiple GPUs,&quot; Alina Alt reviews interoperability between CUDA and OpenGL and presents interoperability between multiple GPUs where one GPU is used for CUDA and another for OpenGL.
+    </p>
+    </td>
+  </tr>
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="TeachingComputerGraphicsStartingwithShaderBasedOpenGL" />
+      1. <em>Teaching Computer Graphics Starting with Shader-Based OpenGL</em>
+      <br />
+	  <a href="contributors.html#EdwardAngel">Edward Angel</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+  </tr> 
+  <tr class="spaceUnder">
+    <td colspan="2">
+		<p>
+		<div class="sectionName">Introduction</div>
+		</p>
+		<p>
+		For at least ten years, OpenGL has been used in the first computer graphics course
+		taught to students in computer science and engineering, other branches of engineering,
+		mathematics, and the sciences. Whether the course stresses basic graphics
+		principles or takes a programming approach, OpenGL provides students with an API
+		to support their learning. One of the many features of the OpenGL API that makes
+		it popular for teaching is its stability and backward compatibility. Hence, instructors
+		needed to make only minor changes in their courses as OpenGL evolved. At
+		least that used to be true: over the last few years, OpenGL has changed rapidly and
+		dramatically.
+		</p>
+		<p>
+		Starting with version 3.1, the fixed function pipeline was eliminated, an action
+		that deprecated immediate mode and many of the familiar OpenGL functions and
+		state variables. Every application must provide at least a vertex shader and a fragment
+		shader. For those of us who use OpenGL to teach our graphics courses, these
+		changes and the introduction of three additional shader stages in subsequent releases
+		of OpenGL have led to a reexamination of how we can best teach computer graphics.
+		As the authors of a popular textbook [Angel 09] used for the first course, we
+		realized that this reexamination was both urgent and deep, requiring input from instructors
+		at a variety of institutions. In the end, we wrote a new edition [Angel and
+		Shreiner 12] that was entirely shader-based. Some of the key issues were addressed
+		briefly in [Angel and Shreiner 11] but this chapter will not only discuss the reasons
+		for the change but will also include practical observations and issues based on the
+		actual teaching of a fully shader-based course.
+		</p>
+		<p>
+		I start with a historical overview, stressing how the software used in the first
+		computer graphics course has changed over the years while the concepts we teach
+		have remained largely unchanged. I review the key elements of a first course in
+		computer graphics. Then I present a typical first <em>Hello World</em> program using the
+		fixed-function pipeline. Next, the reader will see how we have to change that first
+		program when moving to a shader-based course. Finally, I examine how each of the
+		major topics in our standard course is affected by use of a shader-based OpenGL.
+		</p>	
+		<p>
+		...
+		</p>
+	</td>
+  </tr>  
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="TransitioningStudentstoPostDeprecationOpenGL" />
+      2. <em>Transitioning Students to Post-Deprecation OpenGL</em>
+      <br />
+      <a href="contributors.html#MikeBailey">Mike Bailey</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+  </tr> 
+  <tr class="spaceUnder">
+    <td colspan="2">
+		<p>
+		<div class="sectionName">Introduction</div>
+		</p>
+		<p>
+		From an educator's perspective, teaching OpenGL in the past has been a snap. The
+		separation of geometry from topology in the glBegin-glEnd, the simplicity of
+		glVertex3f, and the classic organization of the postmultiplied transformation matrices
+		has been fast and easy to explain. This has considerably excited the students
+		because going from zero knowledge to "cool 3D program you can smugly show your
+		friends" was the task of a single lesson. This made motivation easy.
+		</p>
+		<p>
+		The Great OpenGL Deprecation has changed that. Creating and using vertex
+		buffer objects is a lot more time consuming to explain than glBegin-glEnd [Angel
+		11]. It's also much more error-prone. Creating and maintaining matrices and matrix
+		stacks now requires deft handling of matrix components and multiplication order
+		[GLM 11]. In short, while post-deprecation OpenGL might be more streamlined
+		and efficient, it has wreaked havoc on those who need to teach it and even more on
+		those who need to learn it.
+		</p>
+		<p>
+		So the "old way" is not current, but the "new way" takes a long time to learn before
+		one can see a single pixel. How can we keep students enthusiastic and motivated
+		but still move them along the road to learning things the new way? This chapter
+		discusses intermediate solutions to this problem by presenting C++ classes that ease
+		the transition to post-deprecation OpenGL. These C++ classes are
+		<ol>
+		<li>Create vertex buffers with methods that look suspiciously like glBegin-glEnd.</li>
+		<li>Load, compile, link, and use shaders.</li>
+		</ol>
+		This chapter also suggests a naming convention that can be instrumental in keeping
+		shader variables untangled from each other.		
+		</p>
+		<p>
+		...
+		</p>
+	</td>
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="WebGLforOpenGLDevelopers" />
+      3. <em>WebGL for OpenGL Developers</em>
+      <br />
+      <a href="contributors.html#PatrickCozzi">Patrick Cozzi</a> and <a href="contributors.html#ScottHunter">Scott Hunter</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL</td>
+  </tr> 
+  <tr class="spaceUnder">
+    <td colspan="2">
+		<p>
+		<div class="sectionName">Introduction</div>
+		</p>
+		<p>
+		Don't get us wrong — we are C++ developers at heart. We've battled triple-pointers,
+		partial template specialization, and vtable layouts under multiple inheritance. Yet,
+		through a strange series of events, we are now full-time JavaScript developers. This
+		is our story.
+		</p>
+		<p>
+		At the SIGGRAPH 2009 OpenGL BOF, we first heard about WebGL, an upcoming
+		web standard for a graphics API based on OpenGL ES 2.0 available to
+		JavaScript through the HTML5 canvas element, basically OpenGL for JavaScript.
+		We had mixed feelings. On the one hand, WebGL brought the promise of developing
+		zero-footprint, cross-platform, cross-device, hardware-accelerated 3D applications.
+		On the other, it requires us to develop in JavaScript. Could we do large-scale
+		software development in JavaScript? Could we write high-performance graphics code
+		in JavaScript?
+		</p>
+		<p>
+		After nearly a year of development resulting in over 50,000 lines of JavaScript
+		and WebGL code, we have answered our own questions: properly written JavaScript
+		scales well, and WebGL is a very capable API with tremendous momentum. This
+		chapter shares our experience moving from developing with C++ and OpenGL for
+		the desktop to developing with JavaScript and WebGL for the web. We focus on
+		the unique aspects of moving OpenGL to the web, not on porting OpenGL code to
+		OpenGL ES.		
+		</p>
+		<p>
+		...
+		</p>
+	</td>
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="PortingMobileAppstoWebGL" />
+      4. <em>Porting Mobile Apps to WebGL</em>
+      <br />
+      <a href="contributors.html#AshrafSamyHegab">Ashraf Samy Hegab</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">WebGL<br />OpenGL ES</td>
+  </tr>
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="TheGLSLShaderInterfaces" />
+      5. <em>The GLSL Shader Interfaces</em>
+      <br />
+      <a href="contributors.html#ChristopheRiccio">Christophe Riccio</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+  </tr>
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="AnIntroductiontoTessellationShaders" />
+      6. <em>An Introduction to Tessellation Shaders</em>
+      <br />
+      <a href="contributors.html#PhilipRideout">Philip Rideout</a> and <a href="contributors.html#DirkVanGelder">Dirk Van Gelder</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+  </tr> 
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="ProceduralTexturesinGLSL" />
+      7. <em>Procedural Textures in GLSL</em> [<a href="http://webstaff.itn.liu.se/~stegu/OpenGLinsights/shadertutorial.html" target="_blank">demo</a>]
+      <br />
+      <a href="contributors.html#StefanGustavson">Stefan Gustavson</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">OpenGL<br />WebGL<br />OpenGL ES</td>
+  </tr> 
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="OpenGLSCEmulationBasedonOpenGLandOpenGLES" />
+      8. <em>OpenGL SC Emulation Based on OpenGL and OpenGL ES</em>
+      <br />
+      <a href="contributors.html#HwanyongLee">Hwanyong Lee</a> and <a href="contributors.html#NakhoonBaek">Nakhoon Baek</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">OpenGL<br />OpenGL ES<br />OpenGL SC</td>
+  </tr> 
+</table>
+<hr />
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td>
+	  <a name ="MixingGraphicsandComputewithMultipleGPUs" />
+      9. <em>Mixing Graphics and Compute with Multiple GPUs</em>
+      <br />
+      <a href="contributors.html#AlinaAlt">Alina Alt</a>
+    </td>
+    <td width="15%" align="right" class="tipsAPI">OpenGL</td>
+  </tr> 
+</table>
+
+</body>    
+</html>
