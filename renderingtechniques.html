@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>OpenGL Insights</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <style type="text/css">
+  hr {
+    width: 630px;
+    margin-left: 0;
+  }
+
+  td.sectionName a,
+  td.sectionName a:active,
+  td.sectionName a:visited {
+    text-decoration: none;
+    color: #5482AB;
+  }
+  td.sectionName a:hover {
+    text-decoration: underline;
+  }
+
+  td.sectionName span {
+    font-family: serif;
+  }
+  </style>
+</head>    
+
+<body>
+
+  <a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+  <table summary="" border="0" width="630">
+    <tr align="center" class="sitemap">
+      <td><a href="cover.html">Cover</a></td>
+      <td><a href="toc.html">Table of Contents</a></td>
+      <td><a href="pipeline.html">Pipeline Map</a></td>
+      <td><a href="tips.html">OpenGL Tips</a></td>
+      <td><a href="contributors.html">Contributors</a></td>
+      <td><a href="reviews.html">Reviews</a></td>
+      <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+-->  
+<td><a href="bibtex.html">BibTeX</a></td>
+<td><a href="errata.html">Errata</a></td>
+<td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1>II Rendering Techniques</h1>
+
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td colspan="2">
+    <p>
+      We can't possibly imagine a book about OpenGL without rendering, and neither could the authors of this book.
+    </p>
+    <p>
+      Ant&oacute;nio Ramires Fernandes and Bruno Oliveira provide a use case for the new OpenGL 4 tessellation pipeline through terrain rendering in their chapter &quot;GPU Tessellation: We Still Have a LOD of Terrain to Cover,&quot; providing an entirely GPU-based method for continuous level of detail maintaining a high level of fidelity to the original mesh.
+    </p>
+    <p>
+      S&eacute;bastien Hillaire brings us to a parallel universe where rendering is defined by lines in his chapter &quot;Antialiased Volumetric Lines Using Shader-Based Extrusion.&quot; He comes back on the line primitives exposed by OpenGL and their issues before bringing perspective to line rendering thanks to two approaches: one based on the vertex shader stage and one based on the geometry shader stage for perspective correct and antialiased lines.
+    </p>
+    <p>
+      Stefan Gustavson leads us close to new borders through his chapter &quot;2D Shape Rendering by Distance Fields,&quot; allowing perfectly antialiased contours. He is pushing his concept to font rendering and distance field-based effects.
+    </p>
+    <p>
+      Benjamin Encz analyses WebGL font rendering in his chapter &quot;Efficient Text Rendering in WebGL&quot; by describing canvas and bitmap-based methods. He concludes his chapter with a performance analysis with both the frame rate and the memory footprint in mind.
+    </p>
+    <p>
+      Dzmitry Malyshau discusses an approach inspired by Blender in his chapter &quot;Layered Textures Rendering Pipeline.&quot; He aims at providing more flexibility to the rendering pipeline to handle complex object materials so that artists may express their creativity during the producing while maintaining real-time performance.
+    </p>
+    <p>
+      Charles de Rousiers and Matt Pettineo present a method for &quot;Depth of Field with Bokeh Rendering.&quot; Their method, developed around OpenGL 4 hardware atomic counter, image load and store, and indirect draw, provides a level of performance for real-time application.
+    </p>
+    <p>
+      Finally, Jochem van der Spek introduces a technique he calls &quot;Shadow Proxies,&quot; which provides, for appropriate scenarios, real-time soft shadows with color bleeding.
+    </p>
+    </td>
+  </tr>
+</table>
+
+</body>    
+</html>

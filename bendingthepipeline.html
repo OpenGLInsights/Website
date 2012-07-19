@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>OpenGL Insights</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <style type="text/css">
+  hr {
+    width: 630px;
+    margin-left: 0;
+  }
+
+  td.sectionName a,
+  td.sectionName a:active,
+  td.sectionName a:visited {
+    text-decoration: none;
+    color: #5482AB;
+  }
+  td.sectionName a:hover {
+    text-decoration: underline;
+  }
+
+  td.sectionName span {
+    font-family: serif;
+  }
+  </style>
+</head>    
+
+<body>
+
+  <a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+  <table summary="" border="0" width="630">
+    <tr align="center" class="sitemap">
+      <td><a href="cover.html">Cover</a></td>
+      <td><a href="toc.html">Table of Contents</a></td>
+      <td><a href="pipeline.html">Pipeline Map</a></td>
+      <td><a href="tips.html">OpenGL Tips</a></td>
+      <td><a href="contributors.html">Contributors</a></td>
+      <td><a href="reviews.html">Reviews</a></td>
+      <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+-->  
+<td><a href="bibtex.html">BibTeX</a></td>
+<td><a href="errata.html">Errata</a></td>
+<td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1>III Bending the Pipeline</h1>
+
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td colspan="2">
+    <p>
+      Today GPUs are masters of performance, considering either high-end desktop GPUs or even mobile GPUs, which deliver an unbelievable amount of graphics relative to the power consumption. The future of graphics raises a lot of question regarding how to scale performance, doing more with less. Based on research on petascale and exoscale supercomputers, we notice that such a scale of performance forces us to reconsider memory, bandwidth, and data movement. Challenges are ahead for GPU innovations. Under the name &quot;bending the pipeline,&quot; we include all ideas that push the graphics pipeline to explore alternative ways to feed the rendering pipeline.
+    </p>
+    <p>
+      We start with two classic techniques. The first one, &quot;Real-Time Physically-Based Deformation Using Transform Feedback,&quot; presented by Muhammad Mobeen Movania and Lin Feng, explores the OpenGL transform feedback for GPU-based physical simulation. The second technique, &quot;Hierarchical Depth-Culling and Bounding-Box Management on GPU,&quot; presented by Dzmitry Malyshau, presents a method based on the depth buffer and bounding boxes to discard invisible objects before the actual rendering even starts.
+    </p>
+    <p>
+      Maybe shadow mapping is a way to bend the pipeline, but Daniel R&aacute;kos certainly pushes it further in his chapter &quot;Massive Number of Shadows with Layered Rendering&quot; with a rendering method allowing him to generate multiple shadow maps per draw call thanks to layered rendering.
+    </p>
+    <p>
+      In their chapter &quot;Efficient Layered Fragment Buffer Techniques,&quot; Pyarelal Knowles, Geoff Leach, and Fabio Zambetta lead us to explore one of the most interesting innovations of OpenGL 4 hardware, image load store, and atomic operations, through an example of order-independent transparency with a special highlight of performance resulting from different approaches.
+    </p>
+    <p>
+      One step further into innovation, Daniel R&aacute;kos introduces &quot;Programmable Vertex Pulling,&quot; a radical change of perspective, where we don't submit work to the GPU, but let the GPU query the work. No doubt this approach will evolve and gain a lot of importance in the years to come.
+    </p>
+    <p>
+      If pushing the boundaries of today's graphics requires a shift in paradigm, bringing new asset representations might be an answer. This is the direction of the work on Gigavoxels of Cyril Crassin and Simon Green. For their OpenGL Insights chapter &quot;Octree-Based Sparse Voxelization Using the GPU,&quot; they explain how a GPU may be efficiently used to build voxel-based representation.
+    </p>	
+    </td>
+  </tr>
+</table>
+
+</body>    
+</html>

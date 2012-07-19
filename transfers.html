@@ -1,0 +1,73 @@
+<html>
+<head>
+  <title>OpenGL Insights</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <style type="text/css">
+  hr {
+    width: 630px;
+    margin-left: 0;
+  }
+
+  td.sectionName a,
+  td.sectionName a:active,
+  td.sectionName a:visited {
+    text-decoration: none;
+    color: #5482AB;
+  }
+  td.sectionName a:hover {
+    text-decoration: underline;
+  }
+
+  td.sectionName span {
+    font-family: serif;
+  }
+  </style>
+</head>    
+
+<body>
+
+  <a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+  <table summary="" border="0" width="630">
+    <tr align="center" class="sitemap">
+      <td><a href="cover.html">Cover</a></td>
+      <td><a href="toc.html">Table of Contents</a></td>
+      <td><a href="pipeline.html">Pipeline Map</a></td>
+      <td><a href="tips.html">OpenGL Tips</a></td>
+      <td><a href="contributors.html">Contributors</a></td>
+      <td><a href="reviews.html">Reviews</a></td>
+      <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+-->  
+<td><a href="bibtex.html">BibTeX</a></td>
+<td><a href="errata.html">Errata</a></td>
+<td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1>V Transfers</h1>
+
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td colspan="2">
+    <p>
+      OpenGL applications transfer a lot of data. Data is transferred between machines, between disk and system memory, between system and video memory, between video memory and video memory, and so on. Optimizing these transfers improves performance. In this section, we look at optimizing asynchronous transfers between the CPU and GPU; compressing models for use with WebGL; compressing textures on the GPU for video creation; and an efficient geometry file format.
+    </p>
+    <p>
+      Although general computations like particle systems are being pushed to the GPU, there is still a need to do many computations or IO on the CPU and then efficiently stream data to the GPU. In Chapter 28, &quot;Asynchronous Buffer Transfers,&quot; Ladislav Hrabcak and Arnaud Masserann share best practices for maximizing performance when using buffer objects to transfer data between the CPU and GPU in either direction. With detailed performance analysis, they cover direct memory access (DMA), buffer usage hints, implicit synchronization with draw calls, pinned memory, and multithreading. Shalini Venkataraman continues the asynchronous transfers discussion in the following chapter, &quot;Fermi Asynchronous Texture Transfers,&quot; where she discusses how the NVIDIA Fermi architecture allows transfer and rendering to occur at the same time when using multiple threads and OpenGL contexts.
+    </p>
+    <p>
+      The discussion of transfers moves from within a system to across systems in Chapter 30, &quot;WebGL Models: End-to-End.&quot; Won Chun presents the techniques, including a detailed analysis, used in Google Body to compress and transfer models to a web browser for rendering with WebGL. Continuing on the compression theme, Brano Kemen demonstrates real-time image compression on the GPU in Chapter 31, &quot;In-Game Video Capture with Real-Time Texture Compression.&quot; He applies his method to video compression using a DXT fixed-rate compression format to reduce bandwidth consumption, and he explores various decoloration methods to enhance image compression quality.
+    </p>
+    <p>
+      In graphics, content is king. A smooth content-creation pipeline empowers artists, and a format that requires minimal runtime processing improves load times. In the last chapter of this section, &quot;An OpenGL Friendly Geometry File Format and its Maya Exporter,&quot; Adrien Herubel and Venceslas Biri present the Drone format, a binary geometry file format suitable for use with OpenGL.
+    </p>
+    </td>
+  </tr>
+</table>
+
+</body>    
+</html>

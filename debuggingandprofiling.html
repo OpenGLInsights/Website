@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>OpenGL Insights</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <style type="text/css">
+  hr {
+    width: 630px;
+    margin-left: 0;
+  }
+
+  td.sectionName a,
+  td.sectionName a:active,
+  td.sectionName a:visited {
+    text-decoration: none;
+    color: #5482AB;
+  }
+  td.sectionName a:hover {
+    text-decoration: underline;
+  }
+
+  td.sectionName span {
+    font-family: serif;
+  }
+  </style>
+</head>    
+
+<body>
+
+  <a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+  <table summary="" border="0" width="630">
+    <tr align="center" class="sitemap">
+      <td><a href="cover.html">Cover</a></td>
+      <td><a href="toc.html">Table of Contents</a></td>
+      <td><a href="pipeline.html">Pipeline Map</a></td>
+      <td><a href="tips.html">OpenGL Tips</a></td>
+      <td><a href="contributors.html">Contributors</a></td>
+      <td><a href="reviews.html">Reviews</a></td>
+      <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+-->  
+<td><a href="bibtex.html">BibTeX</a></td>
+<td><a href="errata.html">Errata</a></td>
+<td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1>VI Debugging and Profiling</h1>
+
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td colspan="2">
+    <p>
+      We probably often underestimate how powerful the OpenGL API can be. However, programming is less about the result than the process to reach this result. The most impressive rendering is nothing but the end of a path that is, in a large part, debugging and profiling. Unfortunately, OpenGL doesn't have a great reputation on that side. Who really enjoys using glGetError?
+    </p>
+    <p>
+      This part of the OpenGL experience is now history since the release at SIGGRAPH 2010 of the GL ARB debug ouput extension that revolutionizes every day of an OpenGL programmer's life. This revolution is captured by Ant&oacute;nio Ramires and Bruno Oliveira in their chapter &quot;ARB debug output: OpenGL's Solutions for Desperate Developers,&quot; which shows every aspect of this extension, how to break the program when an OpenGL error occurs, and even opens on interesting debugging perspectives.
+    </p>
+    <p>
+      Profiling knew an earlier take-off in the world of OpenGL programming thanks to the release of GL EXT timer query in 2006, then standardized within OpenGL 3.3. Thanks to Christopher Lux and his chapter, &quot;The OpenGL Timer Query,&quot; this primitive of OpenGL profiling won't hide any secrets any longer.
+    </p>
+    <p>
+      There are two kinds of profiler: the built-in and the external tools, which provide two different approaches to picture profiling. On one side, a profiler tightly connected to application designs and specific use-cases, on other side more generic tools that can embrace all sorts of scenarios and software. The first approach is perfectly reflected by Lionel Fuentes in his chapter &quot;A Real-Time Profiling Tool,&quot; which deals with how a built-in real-time profiler can help the game programmer and also the artist creating game assets. Chris Dirks and Omar A. Rodriguez expose the second approach through their chapter &quot;Browser Graphics Analysis and Optimizations,&quot; which discuss the utilization of Intel GPA to study WebGL performance.
+    </p>
+    <p>
+      Finally, Aleksandar Dimitrijevi&cacute; offers us two innovative profiling chapters, first introducing us to GPU P-States in his chapter &quot;Performance State Tracking,&quot; where he calls our attention to how GPUs reach full speed and how this may affect our performance measurements. He backs his discussion with AMD and NVIDIA proprietary libraries. In his second chapter, he deals with the problem of GPU memory limits. OpenGL doesn't provide functionalities to determine the actual memory usage, but proprietary extensions provide the required information, and Dimitrijevi&cacute; helps us to go through them in his chapter &quot;Monitoring Graphics Memory Usage.&quot;
+    </p>
+    </td>
+  </tr>
+</table>
+
+</body>    
+</html>

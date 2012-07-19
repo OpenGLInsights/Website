@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>OpenGL Insights</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <style type="text/css">
+  hr {
+    width: 630px;
+    margin-left: 0;
+  }
+
+  td.sectionName a,
+  td.sectionName a:active,
+  td.sectionName a:visited {
+    text-decoration: none;
+    color: #5482AB;
+  }
+  td.sectionName a:hover {
+    text-decoration: underline;
+  }
+
+  td.sectionName span {
+    font-family: serif;
+  }
+  </style>
+</head>    
+
+<body>
+
+  <a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+  <table summary="" border="0" width="630">
+    <tr align="center" class="sitemap">
+      <td><a href="cover.html">Cover</a></td>
+      <td><a href="toc.html">Table of Contents</a></td>
+      <td><a href="pipeline.html">Pipeline Map</a></td>
+      <td><a href="tips.html">OpenGL Tips</a></td>
+      <td><a href="contributors.html">Contributors</a></td>
+      <td><a href="reviews.html">Reviews</a></td>
+      <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+-->  
+<td><a href="bibtex.html">BibTeX</a></td>
+<td><a href="errata.html">Errata</a></td>
+<td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1>VII Software Design</h1>
+
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td colspan="2">
+    <p>
+      Developers work with OpenGL at many levels of the software stack. Some developers create OpenGL implementations by writing drivers or, as we will see, using another graphics API; other developers create middleware or engines that simplify the use of OpenGL and raise the level of abstraction; and perhaps the majority of OpenGL developers create actual applications, whether by directly calling OpenGL or by using OpenGL-based engines. In this section, we look at software design at each layer of this stack. We consider implementing OpenGL ES 2.0, engines and applications built on WebGL, making legacy OpenGL code modern, and building cross-platform OpenGL applications.
+    </p>
+    <p>
+      ANGLE, or the Almost Native Graphics Layer Engine, provides an OpenGL ES 2.0 implementation using Direct3D 9. It is used as the default WebGL backend for Chrome and Firefox on Windows. Implementing ANGLE is not nearly as simple as converting OpenGL calls to Direct3D calls; the differences in capabilities of the APIs need to be taken into account. In Chapter 39, &quot;The ANGLE Project: Implementing OpenGL ES 2.0 on Direct3D,&quot; Daniel Koch and Nicolas Capens discuss the implementation challenges in ANGLE, provide performance results, and suggest recommended practices.
+    </p>
+    <p>
+      Given how low-level WebGL is compared to other web APIs, it was clear from its start that there would be demand for higher-level 3D engines built on WebGL. Here, we look at two such engines. SceneJS is an open-source 3D engine, based on a scene graph optimized for rendering large numbers of individually pickable and articulated objects. In Chapter 40, &quot;SceneJS: A WebGL-Based Scene Graph Engine,&quot; Lindsay Kay presents SceneJS' architecture and how it makes efficient use of JavaScript and WebGL.
+    </p>
+    <p>
+      SpiderGL is another 3D graphics library that uses WebGL. Instead of providing higher-level constructs like a scene graph, SpiderGL provides utilities, data structures, and algorithms to simplify WebGL development but still allows the use of other WebGL code in the same application. In Chapter 41, &quot;Features and Design Choices in SpiderGL,&quot; Marco Di Benedetto, Fabio Ganovelli, and Francesco Banterle discuss some design and implementation decisions in SpiderGL including its model representation and allowing seamless interoperability with naive WebGL calls.
+    </p>
+    <p>
+      WebGL is enabling a whole new class of applications. In Chapter 42, &quot;Multimodal Interactive Simulations on the Web,&quot; Tansel Halic, Woojin Ahn, and Suvranu De present a framework for visualization, simulation, and hardware integration for multimodal interactive simulations using WebGL. Think practicing surgical procedures using a web browser!
+    </p>
+    <p>
+      Maintaining legacy and modern OpenGL code in the same code base can prove challenging. Jesse Barker and Alexandros Frantzis share their experiences in Chapter 43, &quot;A Subset Approach to Using OpenGL and OpenGL ES.&quot; They suggest ways to move to a single modern code base written against both OpenGL and OpenGL ES.
+    </p>
+    <p>
+      In &quot;The Build Syndrome,&quot; the final chapter of this section and of the book, Jochem van der Spek and Daniel Dekkers discuss in detail building cross-platform OpenGL applications with C++/Objective-C and CMake.
+    </p>
+    </td>
+  </tr>
+</table>
+
+</body>    
+</html>

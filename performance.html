@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>OpenGL Insights</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <style type="text/css">
+  hr {
+    width: 630px;
+    margin-left: 0;
+  }
+
+  td.sectionName a,
+  td.sectionName a:active,
+  td.sectionName a:visited {
+    text-decoration: none;
+    color: #5482AB;
+  }
+  td.sectionName a:hover {
+    text-decoration: underline;
+  }
+
+  td.sectionName span {
+    font-family: serif;
+  }
+  </style>
+</head>    
+
+<body>
+
+  <a href="index.html"><img src="images/strip.png" width="639" height="140" alt="OpenGL Insights" /></a>
+  <table summary="" border="0" width="630">
+    <tr align="center" class="sitemap">
+      <td><a href="cover.html">Cover</a></td>
+      <td><a href="toc.html">Table of Contents</a></td>
+      <td><a href="pipeline.html">Pipeline Map</a></td>
+      <td><a href="tips.html">OpenGL Tips</a></td>
+      <td><a href="contributors.html">Contributors</a></td>
+      <td><a href="reviews.html">Reviews</a></td>
+      <td><a href="code.html">Code</a></td>
+<!--
+  <td><a href="figures.html">Figures</a></td>
+  <td><a href="bibliography.html">Bibliography</a></td>
+-->  
+<td><a href="bibtex.html">BibTeX</a></td>
+<td><a href="errata.html">Errata</a></td>
+<td><a href="http://blog.openglinsights.com/">Blog</a></td>
+</tr>
+</table>
+
+<h1>IV Performance</h1>
+
+<table summary="" border="0" width="639">
+  <tr class="spaceUnder">
+    <td colspan="2">
+    <p>
+      When it comes to real-time graphics, performance is what defines the possible from the impossible; it is what sets the boundaries.
+    </p>
+    <p>
+      A lack of performance might come from a lack of understanding of the platform we are working on. This may have a dramatic negative impact on the tile-based GPUs leading the OpenGL ES world. In his chapter, &quot;Performance Tuning for TileBased Architectures,&quot; Bruce Merry presents key tile-based GPU architecture features and how to take advantage of them. Jon McCaffrey follows this discussion in his chapter &quot;Exploring Mobile vs. Desktop OpenGL Performance,&quot; which shows the performance-scale differences between the mobile and desktop worlds.
+    </p>
+    <p>
+      Performance is not only the concern of GPU architectures, it is also the direct result of how we write software. With GPUs whose performances increase at a faster rate than CPUs, we are more and more often CPU-bound, leaving us incapable to benefit from all the GPU power. S&eacute;bastien Hillaire, in his chapter &quot;Improving Performance by Reducing Calls to the Drivers,&quot; introduces some fundamental concepts to reduce CPU overhead with a legacy flavor.
+    </p>
+    <p>
+      In his chapter &quot;Indexing Multiple Vertex Arrays,&quot; Arnaud Masserann comes back to one of the most fundamental elements for GPU performance: how we submit vertex array data to the GPU. He provides a directly applicable method to ensure that vertex indexing will be used even on assets not organized this way, like COLLADA geometry.
+    </p>
+    <p>
+      Finally, sometimes we are left with no choice: to scale performance, we must scale the number of GPUs used for rendering. This is the topic of Shalini Venkataraman in her chapter &quot;Multi-GPU Rendering on NVIDIA Quadro.&quot; She explains how to efficiently use multiple GPUs for rendering and integrate their work to build the final image.
+    </p>
+    </td>
+  </tr>
+</table>
+
+</body>    
+</html>
