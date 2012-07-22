@@ -7,7 +7,8 @@ body
 	background-repeat:no-repeat;
 	background-position:center center;
 	background-attachment:fixed;
-    font-family: "Helvetica";
+    font-family: Calibri, Helvetica;
+    text-align:justify;
 }
 /*
 body
@@ -28,8 +29,7 @@ body
 */
 div.page
 {
-	/*margin-top:128px;
-	margin-bottom:0px;*/
+	margin-top:8px;
 	margin-left:auto; 
 	margin-right:auto;
 	padding:64px;
@@ -50,13 +50,18 @@ img.title
 }
 
 h1{ 
-    font-family: "Helvetica";
+    font-family: Calibria;
 	color: #5482AB;
 }
 
 h2{ 
-    font-family: "Helvetica";
+    font-family: Calibria;
 	color: #5482AB;
+}
+
+p
+{
+    text-align:justify;     
 }
 
 a
@@ -65,7 +70,7 @@ a
 }
 
 .sitemap {
-    font-family: "Helvetica";
+    font-family: Calibria;
     font-size: 75%;
 }
 
@@ -83,18 +88,18 @@ tr.spaceUnder > td {
 }
 
 .bookTitle{ 
-    font-family: "Helvetica";
+    font-family: Calibria;
 	color: #5482AB;
 }
 
 .tipsAPI {
-    font-family: "Helvetica";
+    font-family: Calibria;
     font-size: 75%;
 	color: #5482AB;
 }
 
 .sectionName {
-    font-family: "Helvetica";
+    font-family: Calibria;
 	font-weight:bold;
 	color: #5482AB;
 }
