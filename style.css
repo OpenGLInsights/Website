@@ -38,6 +38,7 @@ div.page
 	border-style:solid;
 	border-width:1px;
 	border-color:#000000;
+	text-align:justify;
 }
 
 h1{ 
@@ -107,3 +108,8 @@ table#contributors {
     table#contributors tr td {
       padding: 0.7em;
     }
+    
+a.amazon
+{
+    float:right;
+}
