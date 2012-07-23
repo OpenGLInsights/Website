@@ -131,3 +131,8 @@ a.amazon
 {
     float:right;
 }
+
+.leftText
+{
+    text-align:left;
+}
