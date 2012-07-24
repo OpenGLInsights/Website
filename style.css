@@ -131,3 +131,12 @@ a.amazon
 {
     float:right;
 }
+
+.leftText
+{
+    text-align:left;
+}
+
+.glColor {
+	color: #5482AB;
+}
