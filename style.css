@@ -3,7 +3,7 @@ body
 	margin:0px;
 	padding:0px;
 	background-color:#000000;
-	background-image:url(images/background.jpg);
+	background-image:url(http://www.seas.upenn.edu/~pcozzi/OpenGLInsights/images/background.jpg);
 	background-repeat:no-repeat;
 	background-position:center center;
 	background-attachment:fixed;
