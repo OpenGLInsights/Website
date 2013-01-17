@@ -140,3 +140,7 @@ a.amazon
 .glColor {
 	color: #5482AB;
 }
+
+.strikeout {
+    text-decoration: line-through;
+}
